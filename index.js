@@ -149,10 +149,10 @@ console.log()
       this.catchPhrase = obj.catchPhrase;
     }
       demo(subject){
-        return `Today we are learning about ${this.subject}.`
+        return `Today we are learning about ${subject}.`
       }
       grade(student){
-        return `${this.name} receives a perfect score on ${this.subject}`;
+        return `${student} receives a perfect score on ${this.subject}`;
       }
  }
   /*
@@ -171,7 +171,24 @@ console.log()
           + `sprintChallenge` similar to PRAssignment but returns `student.name has begun sprint challenge on {subject}`
   */
  class Student extends Lambdasian{
-     
+   constructor(arg){
+     super(arg);
+     this.previousBackground = arg.previousBackground;
+     this.className = arg.className;
+     this.favSubjects = [];
+   }
+   listSubjects(){
+     return `Loving`
+   }
+   listSubjects(){
+
+   }
+   PRAssignment(){
+
+   }
+   springChallenge(subject){
+     return `${this.name} has begun sprint challenge on ${this.subject}`
+   }
  }
   
   /*
@@ -187,8 +204,18 @@ console.log()
           + `standUp` a method that takes in a slack channel and returns `{name} announces to {channel}, @channel standy times!`
           + `debugsCode` a method that takes in a student object and a subject and returns `{name} debugs {student.name}'s code on {subject}`
   */
- class ProjectManager {
-     
+ class ProjectManager extends Instructor {
+     constructor(arg){
+       super(arg);
+       this.gradClassName = arg.gradClassName;
+       this.favInstructor = arg.favInstructor;
+     }
+     standUp(){
+
+     }
+     debugsCode(){
+
+     }
  }
   /*
     STRETCH PROBLEM (no tests!)
