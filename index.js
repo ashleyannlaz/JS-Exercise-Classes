@@ -151,8 +151,8 @@ console.log()
       demo(subject){
         return `Today we are learning about ${subject}.`
       }
-      grade(student){
-        return `${student} receives a perfect score on ${this.subject}`;
+      grade(student,subject){
+        return `${student} receives a perfect score on ${subject}`;
       }
  }
   /*
@@ -175,19 +175,17 @@ console.log()
      super(arg);
      this.previousBackground = arg.previousBackground;
      this.className = arg.className;
-     this.favSubjects = [];
-   }
+     this.favSubjects = arg.favSubjects;
+   
+  }
    listSubjects(){
-     return `Loving`
+      return `Loving ${this.favSubjects[0]}, ${this.favSubjects[1]}, ${this.favSubjects[2]}`;
    }
-   listSubjects(){
-
+   PRAssignment(subject){
+      return `${this.name} has submitted a PR for ${subject}`;
    }
-   PRAssignment(){
-
-   }
-   springChallenge(subject){
-     return `${this.name} has begun sprint challenge on ${this.subject}`
+   sprintChallenge(subject){
+     return `${this.name} has begun sprint challenge on ${subject}`;
    }
  }
   
